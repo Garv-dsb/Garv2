@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coffee Art</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .main_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
+
+      .outer_circle {
+        position: relative;
+        width: 340px;
+        height: 340px;
+        background-color: rgb(218, 154, 15);
+        border-radius: 50%;
+      }
+
+      .outer_circle::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 280px;
+        width: 50px;
+        height: 100px;
+        background-color: rgb(172, 122, 15);
+        z-index: -1;
+        transform: rotate(50deg);
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      .inner_circle {
+        position: absolute;
+        top: 35px;
+        left: 35px;
+        width: 270px;
+        height: 270px;
+        background-color: rgb(172, 122, 15);
+        border-radius: 50%;
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.3);
+      }
+
+      .coffee_circle {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 250px;
+        height: 250px;
+        background-color: #6f4e37;
+        border-radius: 50%;
+      }
+
+      .coffee_circle_inner {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 230px;
+        height: 230px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        opacity: 0.1;
+        box-shadow: inset 0 0 35px rgba(0, 0, 0, 0.2);
+      }
+
+      .coffee_circle_inner_extra {
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        width: 220px;
+        height: 220px;
+        background-color: #6f4e37;
+        border-radius: 50%;
+      }
+
+      .dop1 {
+        position: absolute;
+        top: 270px;
+        left: 160px;
+        width: 100px;
+        height: 100px;
+        background-color: #6f4e37;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      .dop3 {
+        position: absolute;
+        top: 220px;
+        left: 250px;
+        width: 100px;
+        height: 100px;
+        background-color: #6f4e37;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      .dop2 {
+        position: absolute;
+        top: 250px;
+        left: 220px;
+        width: 130px;
+        height: 130px;
+        background-color: #6f4e37;
+        border-radius: 50%;
+        z-index: -1;
+      }
+
+      .small_drop1 {
+        position: absolute;
+        top: 390px;
+        left: 190px;
+        background-color: #6f4e37;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+
+      .small_drop2 {
+        position: absolute;
+        top: 440px;
+        left: 215px;
+        background-color: #6f4e37;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        z-index: 1;
+      }
+    </style>
+  </head>
+  <body class="main_container">
+    <div class="outer_circle">
+      <div class="inner_circle">
+        <div class="coffee_circle">
+          <div class="coffee_circle_inner">
+            <div class="coffee_circle_inner_extra"></div>
+          </div>
+        </div>
+      </div>
+      <div class="dop1"></div>
+      <div class="dop2"></div>
+      <div class="dop3"></div>
+  
+      <div class="small_drop1"></div>
+      <div class="small_drop2"></div>
+    </div>
+  </body>
+</html>

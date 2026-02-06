@@ -1,0 +1,7 @@
+.bg-image {
+  background-image: url("https://cdn.prod.website-files.com/696074945cb163c33f02bf78/69610ef4eeda27779c9b4e34_59bda031c75ba1eb71d853fe366c9c01_pexels-bluerhinomedia-3665354.avif");
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat;
+  object-fit: cover;
+}

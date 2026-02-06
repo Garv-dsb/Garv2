@@ -104,5 +104,94 @@ console.log(addressObject); // The addressObject pincode is deleted now
 // Iteration over the JS object - Iteration loops
 
 for (let data in addressObject) {
-  console.log(addressObject[data]); 
+  console.log("Loop over the values of the addressObject:".data); // ptint the keys and the values
 }
+
+// using Object.keys() , object.values() , Object.Entries()
+
+const obj = {
+  name: "Garv",
+  age: 21,
+};
+
+console.log(Object.keys(obj)); // This will return the keys
+console.log(Object.values(obj)); // this will return the arrays of values
+console.log(Object.entries(obj)); // this will return two arrays - one of with values and one of with the values and one of with the keys
+
+// To iterate over this arrays we use the ( for .. of) loops
+
+for (let [key, value] of Object.entries(obj)) {
+  console.log(`key : ${key} and value : ${value}`);
+}
+
+// Object.keys() - return the array of keys
+
+for (let keys of Object.keys(obj)) {
+  console.log(`The key : ${keys}`);
+}
+
+// Object.values() - return the array of values
+
+for (let values of Object.values(obj)) {
+  console.log(`The Value : ${values}`);
+}
+
+// Propery of the Object  - Properties are key:value Pairs
+
+//  'in' operator used for the property Exsisitence check in the Object
+
+console.log("name" in obj); // True ( The property exsist )
+console.log("address" in obj); // false ( The property not exsist )
+
+// Nested Object - Nested Object are the Objects under the objects
+
+const userData = {
+  name: "Garv",
+  age: 21,
+  "address Data": {
+    street: "ABC XYZ",
+    pinCode: 136131,
+    postCode: 132121,
+    Landmark: "Near Hotel Grand , New York",
+  },
+};
+
+// Accessing the nested Object using the dot operator (.)
+console.log(userData["address Data"]["street"]);
+
+// Object Method - OBject method are the actions that can perform on the object
+
+// The This keyword - this keyword basically target the current refer value
+
+// If the this is in the current object method , this is target to the that object.
+
+const functObj = {
+  name: "Garv Thakral",
+  age: 21,
+  greet: function () {
+    return `This is the user ${this.name}`;
+  },
+};
+
+console.log(functObj.greet());
+
+// 'this' basically target the current refer instace
+
+// we used this because we can use the same function to multiple object
+
+const functObjectNew = {
+  name: "Rahul Kumar",
+  age: 21,
+  greet: function () {
+    return `This is the new user ${this.name}`;
+  },
+};
+
+console.log(functObjectNew.greet());
+
+console.log(Object.freeze(obj)); // Object is Freeze we cannot add the more data in it . it prevent the data to be added to in it.
+
+obj.fullName = "Garv Thakral!";
+console.log(obj);
+
+

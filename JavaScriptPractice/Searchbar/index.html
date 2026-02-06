@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Bar</title>
+
+    <style>
+      .data_container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .data_container li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <input
+        type="text"
+        name="search"
+        id="search"
+        placeholder="Search the Data"
+      />
+    </form>
+    <ul class="data_container"></ul>
+  </body>
+
+  <script>
+    const data_container = document.querySelector(".data_container");
+    const Search_input = document.querySelector("#search");
+    const Search_data = ["Apple", "Fruits", "Banana", "Mango", "Grapes"];
+    const Search_Element = document.createElement("li");
+
+    // Search_data.map((data) => {
+    //   Search_Element.innerText = data;
+    //   return data_container.appendChild(Search_Element);
+    // });
+
+    // Search_input.addEventListener("input", (e) => {
+    //   const Searched_data = Search_data.filter((data) => {
+    //     return data === e.target.value;
+    //   });
+    //   const Searched_new_Elements = document.createElement("li");
+    //   Searched_new_Elements.innerText = Searched_data;
+    //   return data_container.appendChild(Searched_new_Elements);
+    // });
+
+    // function
+  </script>
+</html>

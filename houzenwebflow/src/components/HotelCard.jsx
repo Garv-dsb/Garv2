@@ -1,8 +1,8 @@
 import React from "react";
 
-const HotelCard = ({mainImage,title,description}) => {
+const HotelCard = ({ mainImage, title, description }) => {
   return (
-    <div className="bg-white rounded-lg w-[48%] shadow-md">
+    <div className="bg-white rounded-lg w-full sm:w-[calc(50%-10px)] md:w-[calc(50%-12px)] lg:w-[calc(33.333%-15px)] shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden">
       <div>
         <img
           className="w-[100%] min-w-[319px] object-cover rounded-t-sm"
@@ -21,7 +21,9 @@ const HotelCard = ({mainImage,title,description}) => {
                 className="w-[24px]"
                 src="https://cdn.prod.website-files.com/68ca7130feb656001a9ecc33/68ce1ed7ca5dda078e8f5c5b_Bathtub.svg"
               />
-              <div className="text-[16px] text-[#666] ">3-4</div>
+              <div className="text-[16px] text-[#666] flex items-center">
+                3-4
+              </div>
             </div>
             <div className="flex gap-[10px] items-center">
               <img
