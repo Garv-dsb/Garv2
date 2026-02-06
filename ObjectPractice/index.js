@@ -165,12 +165,15 @@ console.log(
 votes = ["Dune", "Matrix", "Dune", "Alien", "Matrix", "Dune"];
 
 function votesCounter(votesData) {
-  votes.map((votesData) => {
-    console.log(votes.indexOf(votesData));
-  });
+  const votes = {};
+  for (let data of votesData) {
+    votes[data] = (votes[data] || 0) + 1;
+  }
+
+  return votes;
 }
 
-// console.log(votesCounter(votes));
+console.log("Answer 5 - The maximum votes goes to the :", votesCounter(votes));
 
 // Output
 // {
@@ -359,7 +362,10 @@ function TotalInventryValue(inventory) {
   return totalPrice;
 }
 
-console.log(TotalInventryValue(inventory));
+console.log(
+  "Answer 10 - The value of the total inventry value is :",
+  TotalInventryValue(inventory),
+);
 
 // Output
 // 99
