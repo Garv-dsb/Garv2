@@ -58,14 +58,14 @@ function alienTranslater(alienLanguage) {
   // we can't directly split the data in the object . so accessing the directly the values we are using
   // Object.values()
 
-  const alienWords = Object.values(alienLanguage); // split the words into array
+  const alienWords = Object.values(alienLanguage); // split the words into array ( in Object)
   let translateWord = alienWords.join(" "); // join into the strng
 
   return translateWord; // return the translated data to english
 }
 
 console.log(
-  "Answer 2 - The translateof the Alien is :",
+  "Answer 2 - The translateof the Alien is:",
   alienTranslater(dictionary),
 );
 
@@ -321,7 +321,7 @@ function findMessage(message) {
   const messageData = Object.entries(message);
   let secretMessage = [];
 
-  messageData.forEach((msg) => {
+  messageData.forEach((msg) => { 
     if (msg[1] === true) {
       secretMessage.push(msg[0]);
     }

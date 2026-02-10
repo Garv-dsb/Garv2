@@ -133,4 +133,57 @@ Promise.race([firstSetTimOut, SecondSetTimOut]).then((data) => {
   console.log(data);
 });
 
-// Promises.any()
+const promiseWithResolver = () => {
+  const { promise, resolve } = Promise.withResolvers();
+
+  console.log(Promise.resolve());
+};
+
+promiseWithResolver();
+
+// Use cases of the async / await
+
+// async - async is the keyword is used where we want to make the function asynchronous - that this is the async function and can wait for that and we can run the asynchronous tasks
+
+// await - await is also the keywoard where this is used to make a task wait for this to run and then run others
+
+const awaitFunction = async (fetchUser) => {
+  // wait for fetch the user then print the details of the user
+
+  const data = await fetch("https://jsonplaceholder.typicode.com/posts").then(
+    (res) => {
+      console.log(res);
+    },
+  );
+
+  console.log("User is fetched then Print the Details:");
+};
+
+const fetchUser = (user) => {
+  console.log(
+    "The user name is ",
+    user.name,
+    "and the age of the user is ",
+    user.age,
+    "The address od the user is :",
+    user["address"],
+  );
+};
+
+awaitFunction(fetchUser);
+
+// How the async / await overcome the Promises chain
+
+const fetchMultipleData = async () => {
+  const data = await fetch("https://jsonplaceholder.typicode.com/posts").then(
+    (res) => {
+      console.log("Multiple Post Data", multiplePostData);
+    },
+  );
+  const singlePostData = await fetch(
+    "https://jsonplaceholder.typicode.com/posts/1",
+  );
+  console.log("Single Post Data ", singlePostData);
+};
+
+fetchMultipleData();
