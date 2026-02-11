@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Handling</title>
+  </head>
+  <body>
+    <button onclick="alert('Button is Clicked')">Click Me</button>
+
+    <button onclick="printButtonCount()">Button Count</button>
+
+    <button id="myButton">Event with Js</button>
+    <input id="elem" type="button" value="Click me" />
+
+    <!-- Accessing the This  -->
+    <!-- Return the Actual current Value  -->
+    <button onclick="alert(this.innerHTML)">Hello Button</button>
+
+    <!-- Event Bubbling is the phase where we can bubble the Elements - it allow the target element -->
+
+    <script>
+      elem.onclick = function () {
+        alert("Thank you");
+      };
+    </script>
+    <script src="index.js"></script>
+  </body>
+</html>

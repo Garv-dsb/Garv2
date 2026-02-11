@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SearchBar</title>
+  </head>
+  <body>
+    <input
+      type="search"
+      name="searc"
+      id="inputSearch"
+      placeholder="Search the Fruits"
+    />
+    <ul id="listContainer"></ul>
+
+    <script>
+      const inputSearch = document.querySelector("#inputSearch");
+      const listContainer = document.querySelector("#listContainer");
+      const fruitsData = ["Apple", "Mango", "Grapes", "PineApple"];
+
+      function displayFruits(fruits) {
+        listContainer.innerHTML = "";
+
+        fruits.forEach((element) => {
+          const items = document.createElement("li");
+          items.textContent = element;
+          listContainer.append(items);
+        });
+      }
+
+      displayFruits(fruitsData);
+
+      inputSearch.addEventListener("input", () => {
+        const data = fruitsData.filter((fruitsElement) =>
+          fruitsElement.toLowerCase().includes(inputSearch.value.trim().toLowerCase()),
+        );
+        displayFruits(data);
+      });
+    </script>
+  </body>
+</html>
