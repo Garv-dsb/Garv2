@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TO - DO</title>
+    <!-- cdn talwind for style  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font awesome cdn  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div
+      class="container mx-auto px-[30px] py-[20px] md:px-[100px] md:py-[40px] lg:px-[150px] lg:py-[60px]"
+    >
+      <!-- TItle -->
+      <h3 class="font-bold text-[20px] text-[#4A4A54] mb-[15px]">Your To Do</h3>
+      <!-- Input and add Button  -->
+      <div class="flex flex-col gap-[25px]">
+        <!-- input for search -->
+        <div class="flex gap-[20px]">
+          <input
+            class="border-b-[1px] w-full outline-none"
+            type="text"
+            name="addTask"
+            id="addTask"
+            placeholder="Enter New Task"
+          />
+
+          <!-- Add Button  -->
+          <div
+            class="w-[30px] h-[30px] bg-[#4A4A54] flex justify-center items-center text-white rounded-[5px] hover:cursor-pointer"
+            id="addButton"
+          >
+            <i class="fa-solid fa-plus"></i>
+          </div>
+        </div>
+
+        <!-- Display the Tasks  -->
+        <ul id="taskContainer" class="flex flex-col gap-[10px]"></ul>
+
+        <div id="totalTasks"></div>
+      </div>
+    </div>
+
+    <!-- Adding the script  -->
+    <script src="todo.js"></script>
+  </body>
+</html>
