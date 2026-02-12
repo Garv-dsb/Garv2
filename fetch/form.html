@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Form Data</title>
+
+    <!-- link talwind  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <div class="flex flex-col gap-[20px] p-[15px]">
+      <!-- title  -->
+      <h1 class="mx-auto">FETCH POST REQIEST WITH FORM</h1>
+      <!-- form container  -->
+      <div class="container mx-auto flex flex-col justify-center max-w-[500px]">
+        <form
+          id="infoForm"
+          class="flex flex-col gap-[30px] bg-[#D3D3D3] rounded-[10px] p-[20px]"
+        >
+          <!-- title input  -->
+          <input
+            type="text"
+            name="title"
+            id="title"
+            placeholder="Enter the Title"
+            class="border-b-[1px] border-grey-500 outline-none"
+          />
+
+          <!-- description input  -->
+          <input
+            type="text"
+            name="body"
+            id="body"
+            placeholder="Enter the Description"
+            class="border-b-[1px] border-grey-500 outline-none"
+          />
+
+          <!-- submit Button  -->
+          <div class="flex flex-start">
+            <button
+              type="submit"
+              class="px-[5px] py-[2px] bg-[#A9A9A9] w-[100px] rounded-[10px]"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="form.js"></script>
+  </body>
+</html>
